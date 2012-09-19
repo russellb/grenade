@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grenade - Frequently Asked Questions</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/local.css" rel="stylesheet">
+    <style type="text/css">
+      body { padding-top: 60px; }
+      dd { padding: 10px; }
+    </style>
+    
+    <!-- Le javascripts -->
+    <script src="assets/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Grenade</a>
+          <ul class="nav pull-right">
+            <li><a href="http://github.com/dtroyer/grenade">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="home">
+      
+      <section id="faq" class="span12">
+
+        <div class='row pull-left'>
+          <h2>FAQ <small>Why did you do it this way?!</small></h2>
+          <dl class='pull-left'>
+            <dt>Q: Wow, that's a lot of output, can that be reduced?</dt>
+            <dd>A: Adding <code>VERBOSE=no</CODE> to localrc will tell <code>grenade.sh</code> to save all output to the log file as usual but only display occasional status messages to the terminal.</dd>
+    
+            <dt>Q: How do I use a Gerrit branch of a project?</dt>
+            <dd>A: Generally this is for the <code>trunk</code> DevStack configuration.  Add the same <code>*_REPO</code> and <code>*_BRANCH</code> lines to <code>devstack.local.trunk</code> that would be used for DevStack.  For example, to use a specific branch of Glance:
+              <pre>GLANCE_REPO=https://review.openstack.org/openstack/glance
+GLANCE_BRANCH=refs/changes/11/1111/1</pre>
+            </dd>
+    
+            <dt>Q: How do I re-run just one project upgrade?</dt>
+            <dd>A: The <code>upgrade-*</code> scripts can be executed stand-alone, although the fancy output options are not available.</dd>
+
+            <dt>Q: I'd like to help!</dt>
+            <dd>A: That isn't a question, but please do!  The source for Grenade is in <a href="http://github.com/dtroyer/grenade">github</a>.  Contributions should use the usual GitHub pull request process.  This site is housed in the gh-pages branch.</dd>
+    
+            <dt>Q: Why not use packages instead of DevStack?</dt>
+            <dd>A: Grenade is intended for testing the upgrade process throughout the development cycle and can be used both in continuous integration and by individual developers.  The upgrade details learned and encapsulated in Grenade's <code>upgrade-*</code> scripts can be the basis for packagers to develop their packaged upgrade scripts.</dd>
+    
+            <dt>Q: Why isn't <code>$MY_FAVORITE_DISTRO</code> supported?</dt>
+            <dd>A: Grenade is targeted for testing OpenStack upgrades, which tend to not be distro-sensitive. The CI system uses Ubuntu as the testing platform so Ubuntu was chosen first.</dd>
+
+            <dt>Q: What releases of Ubuntu are supported??</dt>
+            <dd>A: The current incarnation of Grenade supports Ubuntu Oneiric (11.10) and Precise (12.04).</dd>
+
+            <dt>Q: Does Grenade handle a multi-node installation?</dt>
+            <dd>A: Nope.</dd>
+          </dl>
+        </div>        
+
+      </section>
+
+      <footer>
+        <p>&copy; Openstack LLC 2011-2012 &mdash; Created by <a href="http://www.rackspace.com/cloud/private_edition/">Rackspace Cloud Builders</a> &mdash; this is also not an official OpenStack project.</p>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>
