@@ -22,7 +22,7 @@ from Essex to Folsom it needs to be generalized for future releases.
 Grenade has two DevStack installs present and distinguished between then
 as 'work' and 'trunk'.
 
-* **Work**: The initial install that is will be upgraded.
+* **Work**: The initial install that will be upgraded.
 * **Trunk**: The reference install of trunk OpenStack (maybe just DevStack)
 
 
